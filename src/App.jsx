@@ -1,10 +1,25 @@
+import Header from "./components/Header/Header";
+import { Routes, Route } from "react-router-dom";
+import Home from './pages/Home';
+import Beatrooms from './pages/Beatrooms';
+import About from './pages/About';
+import Register from './pages/Register';
+import Livebattle from './pages/Livebattle';
+
 function App() {
   return (
     <>
-    <div className="container bg-black ">
-      <h1 className="text-3xl font-bold underline text-white">Hello world!</h1>
-    </div>
+
+   <Header />
+   <Routes>
+    <Route path='/' element={<Home />}  />
+    <Route path='/beat-rooms' element={<Beatrooms/>}  />
+    <Route path='/live-battle' element={<Livebattle/>}  />
+    <Route path='/about' element={<About/>}  />
+    <Route path='/register' element={<Register/>}  />
+   </Routes>
     </>
+
   );
 }
 
